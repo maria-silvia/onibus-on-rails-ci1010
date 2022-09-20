@@ -11,6 +11,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/sidebar' %>  
+    <main style="margin-left: 200px; padding: 10px 30px">
+      <%= yield %>
+    </main>
   </body>
 </html>

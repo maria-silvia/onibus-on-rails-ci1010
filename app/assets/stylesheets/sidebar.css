@@ -1,0 +1,32 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #59CE8F;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #E8F9FD;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #E8F9FD;
+    color: black;
+    font-weight: bold;
+}
