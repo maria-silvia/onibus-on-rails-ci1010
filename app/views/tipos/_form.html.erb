@@ -1,0 +1,27 @@
+<%= form_with(model: tipo) do |form| %>
+  <% if tipo.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>
+
+      <ul>
+        <% tipo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :cor, style: "display: block" %>
+    <%= form.text_field :cor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
