@@ -1,6 +1,6 @@
 # onibus-on-rails-ci1010
 
-T5 de Programação Web =)
+T5 de Programação Web
 
 Este trabalho tem como tema o transporte público de Curitiba.
 Permite ver e, ao administrador, criar, editar e deletar:
@@ -14,6 +14,14 @@ Permite ver e, ao administrador, criar, editar e deletar:
 
 - ruby 3.0.0p0
 - Rails 7.0.3.1
+
+<!-- - Configuration -->
+
+- Database creation and initialization
+  `rails db:setup`
+
+- How to run the test suite
+  `rake test`
 
 ### Relações do banco de dados
 
@@ -31,14 +39,11 @@ Permite ver e, ao administrador, criar, editar e deletar:
 > Uma linha passa em um ou mais terminais.
 > Um terminal tem uma ou mais linhas passando nele.
 
-<!-- - Configuration -->
+### Desenvolvimento
 
-<!-- - Database creation -->
+```ruby
+rails g scaffold Tipo nome:string cor:string
+rails g scaffold Linha nome:string codigo:integer tipo:belongs_to
+```
 
-<!-- - Database initialization -->
-
-<!-- - How to run the test suite -->
-
-<!-- - Services (job queues, cache servers, search engines, etc.) -->
-
-<!-- - Deployment instructions -->
+Adicionar `has_many :linhas, :dependent => :destroy` em model do Tipo
