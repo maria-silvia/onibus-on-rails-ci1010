@@ -35,3 +35,9 @@ h1 {
     text-decoration: underline;
     color: cornflowerblue;
 }
+
+.show-functions {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}

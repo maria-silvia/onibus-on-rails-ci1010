@@ -1,8 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @tipo %>
+<h2 style="color: <%= get_color_by_tipo(@tipo) %>">
+  Tipo de Linha: <%= @tipo.nome %> 
+</h2>
 
-<div>
+
+<h4>
+  Linhas desse tipo:
+</h4>
+
+<% @tipo.linhas.each do |linha| %>
+  <%= render linha %>
+<% end %>
+
+<div class="show-functions">
   <%= link_to "Edit this tipo", edit_tipo_path(@tipo) %> |
   <%= link_to "Back to tipos", tipos_path %>
 
