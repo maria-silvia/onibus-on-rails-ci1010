@@ -1,6 +1,6 @@
 <div id="<%= dom_id linha %>">
 
-  <div class="linha_block">
+  <div class="linha_block" style="color: <%= get_color_by_tipo(linha.tipo) %>">
 
     <span> 
       <%= linha.codigo %> 
@@ -8,9 +8,7 @@
     
     <%= link_to linha.nome, linha %>
     
-    <span style="color: <%= get_color_by_tipo(linha.tipo) %>" > 
-      <%= linha.tipo.nome %> 
-    </span>
+    <%= link_to linha.tipo.nome, linha.tipo %>
 
   </div>
 
