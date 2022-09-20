@@ -2,13 +2,11 @@
 
 <h1>Linhas</h1>
 
+<%= link_to "New linha", new_linha_path %>
+
 <div id="linhas">
   <% @linhas.each do |linha| %>
     <%= render linha %>
-    <p>
-      <%= link_to "Show this linha", linha %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New linha", new_linha_path %>
