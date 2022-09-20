@@ -1,4 +1,4 @@
-<%= form_with(model: linha) do |form| %>
+<%= form_with(model: linha, html: {class: "my_form"}) do |form| %>
   <% if linha.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(linha.errors.count, "error") %> prohibited this linha from being saved:</h2>
@@ -23,7 +23,9 @@
 
   <div>
     <%= form.label :tipo_id, style: "display: block" %>
-    <%= form.collection_radio_buttons :tipo_id, Tipo.order(:name), :id, :nome %>
+    <div class="form_radio_items">
+      <%= form.collection_radio_buttons :tipo_id, Tipo.order(:name), :id, :nome %>
+    </div>
   </div>
 
 

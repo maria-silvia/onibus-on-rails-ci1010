@@ -1,4 +1,4 @@
-<%= form_with(model: tipo) do |form| %>
+<%= form_with(model: tipo, html: {class: "my_form"}) do |form| %>
   <% if tipo.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>

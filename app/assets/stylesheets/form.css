@@ -1,0 +1,25 @@
+.my_form {
+    background-color: #E8F9FD;
+    padding: 20px;
+    margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+.my_form > div {
+    margin-bottom: 15px;
+}
+.my_form > div > label {
+    padding-bottom: 7px;
+}
+.my_form input[type=submit] {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.form_radio_items {
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: 50px 1fr;
+}
