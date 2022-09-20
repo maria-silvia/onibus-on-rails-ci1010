@@ -1,7 +1,17 @@
 <div id="<%= dom_id linha %>">
+
   <div class="linha_block">
-    <span> <%= linha.codigo %> </span>
+
+    <span> 
+      <%= linha.codigo %> 
+    </span>
+    
     <%= link_to linha.nome, linha %>
-    <span> <%= linha.tipo_id %> </span>
+    
+    <span style="color: <%= get_color_by_tipo(linha.tipo) %>" > 
+      <%= linha.tipo.nome %> 
+    </span>
+
   </div>
+
 </div>
