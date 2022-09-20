@@ -1,0 +1,19 @@
+.new-link {
+    box-shadow: inset 0 0 0 0 #59CE8F;
+    border: 1px solid #59CE8F;
+    text-decoration: none;
+    color: #59CE8F;
+    font-weight: bold;
+    margin-block: 5px;
+    padding: 5px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.new-link:hover {
+    box-shadow: inset 100px 0 0 0 #59CE8F;
+    color: white;
+}

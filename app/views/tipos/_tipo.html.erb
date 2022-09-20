@@ -1,12 +1,10 @@
 <div id="<%= dom_id tipo %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= tipo.nome %>
-  </p>
 
-  <p>
-    <strong>Cor:</strong>
-    <%= tipo.cor %>
+  <p style="color: <%= get_color_by_tipo(tipo) %>" > 
+    <%= tipo.nome %> 
+    <em>
+      <%= link_to "ver linhas", tipo %>
+    </em>
   </p>
 
 </div>

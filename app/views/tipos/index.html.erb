@@ -2,13 +2,11 @@
 
 <h1>Tipos</h1>
 
+<%= link_to "New tipo", new_tipo_path, class:"new-link" %>
+
 <div id="tipos">
   <% @tipos.each do |tipo| %>
     <%= render tipo %>
-    <p>
-      <%= link_to "Show this tipo", tipo %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New tipo", new_tipo_path %>
