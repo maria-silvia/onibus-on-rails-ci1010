@@ -23,8 +23,9 @@
 
   <div>
     <%= form.label :tipo_id, style: "display: block" %>
-    <%= form.text_field :tipo_id %>
+    <%= form.collection_radio_buttons :tipo_id, Tipo.order(:name), :id, :nome %>
   </div>
+
 
   <div>
     <%= form.submit %>

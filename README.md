@@ -46,4 +46,5 @@ rails g scaffold Tipo nome:string cor:string
 rails g scaffold Linha nome:string codigo:integer tipo:belongs_to
 ```
 
-Adicionar `has_many :linhas, :dependent => :destroy` em model do Tipo
+- Adicionar `has_many :linhas, :dependent => :destroy` em model do Tipo
+- Adicionar `form.collection_radio_buttons` no \_form de Linha
