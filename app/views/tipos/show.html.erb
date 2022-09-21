@@ -1,21 +1,24 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 500px;">
 
-<h2 style="color: <%= get_color_by_tipo(@tipo) %>">
-  Tipo de Linha: <%= @tipo.nome %> 
-</h2>
+  <p style="color: green"><%= notice %></p>
+
+  <h2 style="color: <%= get_color_by_tipo(@tipo) %>">
+    Tipo de Linha: <%= @tipo.nome %> 
+  </h2>
 
 
-<h4>
-  Linhas desse tipo:
-</h4>
+  <h4>
+    Linhas desse tipo:
+  </h4>
 
-<% @tipo.linhas.each do |linha| %>
-  <%= render linha %>
-<% end %>
+  <% @tipo.linhas.each do |linha| %>
+    <%= render linha %>
+  <% end %>
 
-<div class="show_functions">
-  <%= link_to "Edit this tipo", edit_tipo_path(@tipo) %> |
-  <%= link_to "Back to tipos", tipos_path %>
+  <div class="show_functions">
+    <%= link_to "Edit this tipo", edit_tipo_path(@tipo) %> |
+    <%= link_to "Back to tipos", tipos_path %>
 
-  <%= button_to "Destroy this tipo", @tipo, method: :delete %>
+    <%= button_to "Destroy this tipo", @tipo, method: :delete %>
+  </div>
 </div>

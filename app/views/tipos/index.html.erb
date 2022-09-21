@@ -1,12 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 400px;">
 
-<h1>Tipos de Linhas</h1>
+  <p style="color: green"><%= notice %></p>
 
-<%= link_to "New tipo", new_tipo_path, class:"new-link" %>
+  <h1>Tipos de Linhas</h1>
 
-<div id="tipos">
-  <% @tipos.each do |tipo| %>
-    <%= render tipo %>
-  <% end %>
-</div>
+  <%= link_to "New tipo", new_tipo_path, class:"new-link" %>
+
+  <div id="tipos">
+    <% @tipos.each do |tipo| %>
+      <%= render tipo %>
+    <% end %>
+  </div>
+
+  </div>
 

@@ -1,12 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 600px;">
 
-<h1>Linhas de Ônibus</h1>
+  <p style="color: green"><%= notice %></p>
 
-<%= link_to "New linha", new_linha_path, class:"new-link" %>
+  <h1>Linhas de Ônibus</h1>
 
-<div id="linhas">
-  <% @linhas.each do |linha| %>
-    <%= render linha %>
-  <% end %>
+  <%= link_to "New linha", new_linha_path, class:"new-link" %>
+
+  <div id="linhas">
+    <% @linhas.each do |linha| %>
+      <%= render linha %>
+    <% end %>
+  </div>
 </div>
 
