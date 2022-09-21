@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_20_012256) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_21_193704) do
+  create_table "enderecos", force: :cascade do |t|
+    t.string "rua"
+    t.integer "numero"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "linhas", force: :cascade do |t|
     t.string "nome"
     t.integer "codigo"
@@ -18,6 +25,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_20_012256) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["tipo_id"], name: "index_linhas_on_tipo_id"
+  end
+
+  create_table "terminals", force: :cascade do |t|
+    t.string "nome"
+    t.integer "endereco_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["endereco_id"], name: "index_terminals_on_endereco_id"
   end
 
   create_table "tipos", force: :cascade do |t|
@@ -28,4 +43,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_20_012256) do
   end
 
   add_foreign_key "linhas", "tipos"
+  add_foreign_key "terminals", "enderecos"
 end
