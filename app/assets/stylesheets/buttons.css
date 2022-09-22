@@ -1,4 +1,4 @@
-.new-link {
+.new_link {
     box-shadow: inset 0 0 0 0 #59CE8F;
     border: 1px solid #59CE8F;
     text-decoration: none;
@@ -13,7 +13,7 @@
     top: 60px;
 }
 
-.new-link:hover {
-    box-shadow: inset 100px 0 0 0 #59CE8F;
+.new_link:hover {
+    box-shadow: inset 150px 0 0 0 #59CE8F;
     color: white;
 }

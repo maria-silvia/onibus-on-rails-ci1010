@@ -1,4 +1,4 @@
-<%= form_with(model: terminal) do |form| %>
+<%= form_with(model: terminal, html: {class: "my_form"}) do |form| %>
   <% if terminal.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(terminal.errors.count, "error") %> prohibited this terminal from being saved:</h2>

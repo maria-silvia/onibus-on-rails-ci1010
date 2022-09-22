@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 350px;">
 
-<%= render @terminal %>
+  <p style="color: green"><%= notice %></p>
+  
+  <h2>
+    <%= render @terminal %>
+  </h2>
 
-<div>
-  <%= link_to "Edit this terminal", edit_terminal_path(@terminal) %> |
-  <%= link_to "Back to terminals", terminals_path %>
+  <div class="show_functions">
+    <%= link_to "Edit this terminal", edit_terminal_path(@terminal) %> |
+    <%= link_to "Back to terminals", terminals_path %>
 
-  <%= button_to "Destroy this terminal", @terminal, method: :delete %>
+    <%= button_to "Destroy this terminal", @terminal, method: :delete %>
+  </div>
 </div>

@@ -8,9 +8,10 @@
 
 require_relative './tipos_seeding'
 require_relative './linhas_seeding'
-
+require_relative './terminals_enderecos_seeding'
 
 puts "Seeding..."
 
 seed_tipos
 seed_linhas
+seed_terminals_enderecos

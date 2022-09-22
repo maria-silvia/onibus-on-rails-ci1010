@@ -1,12 +1,11 @@
 <div id="<%= dom_id terminal %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= terminal.nome %>
-  </p>
 
-  <p>
-    <strong>Endereco:</strong>
-    <%= terminal.endereco_id %>
-  </p>
+  <div class="terminal_block" >
 
+    <%= link_to terminal.nome, terminal %>
+    <span> 
+      <%= terminal.endereco.rua %>, <%= terminal.endereco.numero %>
+    </span>
+
+    </div>
 </div>

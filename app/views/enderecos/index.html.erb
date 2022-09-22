@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 350px;">
 
-<h1>Enderecos</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="enderecos">
-  <% @enderecos.each do |endereco| %>
-    <%= render endereco %>
-    <p>
-      <%= link_to "Show this endereco", endereco %>
-    </p>
-  <% end %>
+  <h1>Enderecos</h1>
+
+  <div id="enderecos">
+    <% @enderecos.each do |endereco| %>
+      <%= render endereco %>
+      <p>
+        <%= link_to "Show this endereco", endereco %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New endereco", new_endereco_path, class:"new_link" %>
 </div>
-
-<%= link_to "New endereco", new_endereco_path %>

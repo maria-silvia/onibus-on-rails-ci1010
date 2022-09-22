@@ -42,3 +42,9 @@ h1 {
     display: flex;
     justify-content: space-around;
 }
+
+.terminal_block {
+    padding-block: 5px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+}

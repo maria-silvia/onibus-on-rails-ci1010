@@ -1,14 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div style="margin: auto;position: relative;max-width: 450px;">
 
-<h1>Terminals</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div id="terminals">
-  <% @terminals.each do |terminal| %>
-    <%= render terminal %>
-    <p>
-      <%= link_to "Show this terminal", terminal %>
-    </p>
-  <% end %>
+  <h1>Terminais</h1>
+  
+  <%= link_to "New terminal", new_terminal_path, class:"new_link" %>
+
+  <div id="terminals">
+    <% @terminals.each do |terminal| %>
+      <%= render terminal %>
+    <% end %>
+  </div>
+
 </div>
-
-<%= link_to "New terminal", new_terminal_path %>

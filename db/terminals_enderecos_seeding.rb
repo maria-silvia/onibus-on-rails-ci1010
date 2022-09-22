@@ -1,0 +1,18 @@
+def seed_terminals_enderecos
+    puts "Seeding terminals e enderecos..."
+    lista = [
+        {:nome => "Cabral", :rua => "Av Parana", :numero => "500"        },
+        {:nome => "Capao da Imbuia", :rua => "Av Presidente", :numero => "987"     },
+        {:nome => "Sta Candida", :rua => "Av Parana", :numero => "0"        },
+        {:nome => "Boa Vista", :rua => "Av Parana", :numero => "1000"        },
+    ]
+
+    lista.each do |e|
+        term = Terminal.new()
+        term.nome = e[:nome]
+        e = Endereco.new({:rua => e[:rua], :numero => e[:numero]})
+        term.endereco = e
+        e.save
+        term.save
+    end
+end
