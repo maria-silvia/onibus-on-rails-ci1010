@@ -19,6 +19,11 @@
   <div>
     <%= form.label :endereco_id, style: "display: block" %>
     <%= form.text_field :endereco_id %>
+    <em>
+      <% Endereco.all.each do |endereco| %>
+        <%= render endereco %>
+      <% end %>
+    </em>
   </div>
 
   <div>
