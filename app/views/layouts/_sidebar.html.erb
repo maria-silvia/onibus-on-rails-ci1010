@@ -1,9 +1,9 @@
 <aside class="sidebar">
     <nav>
         <h1>Trabalho 5 WEB</h1>
-        <%= link_to "Linhas", linhas_path, class:"active" %>
-        <%= link_to "Tipos", tipos_path %>
-        <%= link_to "Terminals", terminals_path %>
-        <%= link_to "Enderecos", enderecos_path %>
+        <%= link_to "Linhas", linhas_path, class:"#{'active' if current_page?(linhas_path) || current_page?("/")}" %> 
+        <%= link_to "Tipos", tipos_path, class:"#{'active' if current_page?(tipos_path)}" %> 
+        <%= link_to "Terminals", terminals_path, class:"#{'active' if current_page?(terminals_path)}" %> 
+        <%= link_to "Enderecos", enderecos_path, class:"#{'active' if current_page?(enderecos_path)}" %> 
     </nav>
 </aside>
