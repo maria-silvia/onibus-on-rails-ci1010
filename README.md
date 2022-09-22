@@ -48,3 +48,11 @@ rails g scaffold Linha nome:string codigo:integer tipo:belongs_to
 
 - Adicionar `has_many :linhas, :dependent => :destroy` em model do Tipo
 - Adicionar `form.collection_radio_buttons` no \_form de Linha
+
+```
+rails g scaffold Endereco rua:string numero:integer
+rails g scaffold Terminal nome:string endereco:belongs_to
+```
+
+- Adicionar `has_one :terminal` em endereco.rb
+- Adicionar `belongs_to :endereco, :dependent => :destroy` em terminal.rb
