@@ -6,6 +6,14 @@
     <%= render @terminal %>
   </h2>
 
+  <div>
+    <h4>Linhas:</h4>
+    <% @terminal.linhas.each do |linha| %>
+      <%= render linha %>
+    <% end %>
+  </div>
+
+
   <div class="show_functions">
     <%= link_to "Edit this terminal", edit_terminal_path(@terminal) %> |
     <%= link_to "Back to terminals", terminals_path %>
