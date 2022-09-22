@@ -56,3 +56,7 @@ rails g scaffold Terminal nome:string endereco:belongs_to
 
 - Adicionar `has_one :terminal` em endereco.rb
 - Adicionar `belongs_to :endereco, :dependent => :destroy` em terminal.rb
+
+```
+rails g migration create_linhas_terminals linha_id:integer terminal_id:integer
+```

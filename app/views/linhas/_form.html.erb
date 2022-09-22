@@ -28,6 +28,12 @@
     </div>
   </div>
 
+  <div style="margin-top:30px">
+    <%= form.label :terminals, style: "display: block" %>
+    <div class="form_radio_items">
+      <%= form.collection_check_boxes :terminals, Terminal.order(:name), :id, :nome %>
+    </div>
+  </div>
 
   <div>
     <%= form.submit %>

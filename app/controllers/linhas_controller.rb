@@ -22,7 +22,12 @@ class LinhasController < ApplicationController
   # POST /linhas or /linhas.json
   def create
     @linha = Linha.new(linha_params)
-
+    params[:linha][:terminals].each do |t| 
+      @terminal = Terminal.find_by(id: t)
+      if @terminal
+        @linha.terminals << @terminal
+      end
+    end
     respond_to do |format|
       if @linha.save
         format.html { redirect_to linha_url(@linha), notice: "Linha was successfully created." }
