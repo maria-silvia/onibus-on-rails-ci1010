@@ -41,6 +41,13 @@ class LinhasController < ApplicationController
 
   # PATCH/PUT /linhas/1 or /linhas/1.json
   def update
+    @linha.terminals.destroy_all
+    params[:linha][:terminals].each do |t| 
+      @terminal = Terminal.find_by(id: t)
+      if @terminal
+        @linha.terminals << @terminal
+      end
+    end
     respond_to do |format|
       if @linha.update(linha_params)
         format.html { redirect_to linha_url(@linha), notice: "Linha was successfully updated." }
